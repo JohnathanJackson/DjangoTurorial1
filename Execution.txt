@@ -1,0 +1,172 @@
+Microsoft Windows [Version 10.0.16299.665]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\jj26280>cd djangoenv
+The system cannot find the path specified.
+
+C:\Users\jj26280>cd djangoenvs
+
+C:\Users\jj26280\djangoenvs>python -m venv myvenv
+
+C:\Users\jj26280\djangoenvs> myenv\Scripts\activate
+The system cannot find the path specified.
+
+C:\Users\jj26280\djangoenvs> myvenv\Scripts\activate
+(myvenv) C:\Users\jj26280\djangoenvs>python -m pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001B1DA123550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)': /simple/pip/
+Retrying (Retry(total=3, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001B1DA123748>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)': /simple/pip/
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001B1DA123278>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)': /simple/pip/
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001B1DA4EB550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)': /simple/pip/
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001B1DA4EBF98>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)': /simple/pip/
+Requirement already up-to-date: pip in c:\users\jj26280\djangoenvs\myvenv\lib\site-packages
+
+(myvenv) C:\Users\jj26280\djangoenvs>python -m pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/c2/d7/90f34cb0d83a6c5631cf71dfe64cc1054598c843a92b400e55675cc2ac37/pip-18.1-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-18.1
+
+(myvenv) C:\Users\jj26280\djangoenvs>pip install -r requirements.txt
+Collecting Django~=2.0.6 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/6c/9d/c0feec696b815708354a2fd06ae0f51330a15043822a29bc8be2f185d9fe/Django-2.0.9-py3-none-any.whl
+Collecting pytz (from Django~=2.0.6->-r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/f8/0e/2365ddc010afb3d79147f1dd544e5ee24bf4ece58ab99b16fbb465ce6dc0/pytz-2018.7-py2.py3-none-any.whl
+Installing collected packages: pytz, Django
+Successfully installed Django-2.0.9 pytz-2018.7
+
+(myvenv) C:\Users\jj26280\djangoenvs>django-admin.exe startproject mysite .
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 04, 2018 - 13:44:24
+Django version 2.0.9, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Dec/2018 13:44:32] "GET / HTTP/1.1" 200 16348
+[04/Dec/2018 13:44:32] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[04/Dec/2018 13:44:32] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[04/Dec/2018 13:44:32] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[04/Dec/2018 13:44:32] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py startapp gebcalculator
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py makemigrations tutorial1
+Traceback (most recent call last):
+  File "manage.py", line 15, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Users\jj26280\djangoenvs\myvenv\lib\site-packages\django\core\management\__init__.py", line 371, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\jj26280\djangoenvs\myvenv\lib\site-packages\django\core\management\__init__.py", line 347, in execute
+    django.setup()
+  File "C:\Users\jj26280\djangoenvs\myvenv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\jj26280\djangoenvs\myvenv\lib\site-packages\django\apps\registry.py", line 89, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Users\jj26280\djangoenvs\myvenv\lib\site-packages\django\apps\config.py", line 90, in create
+    module = import_module(entry)
+  File "C:\ProgramData\Anaconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'gebcalculator'
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py makemigrations tutorial1
+App 'tutorial1' could not be found. Is it in INSTALLED_APPS?
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py makemigrations tutorial1
+App 'tutorial1' could not be found. Is it in INSTALLED_APPS?
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py makemigrations gebcalculator
+Migrations for 'gebcalculator':
+  gebcalculator\migrations\0001_initial.py
+    - Create model Post
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py migrate gebcalculator
+Operations to perform:
+  Apply all migrations: gebcalculator
+Running migrations:
+  Applying gebcalculator.0001_initial... OK
+
+(myvenv) C:\Users\jj26280\djangoenvs>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 04, 2018 - 14:18:50
+Django version 2.0.9, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Dec/2018 14:19:00] "GET /admin/ HTTP/1.1" 302 0
+[04/Dec/2018 14:19:00] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1855
+[04/Dec/2018 14:19:00] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[04/Dec/2018 14:19:00] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[04/Dec/2018 14:19:00] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[04/Dec/2018 14:19:00] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Dec/2018 14:19:00] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Dec/2018 14:19:00] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Dec/2018 14:22:23] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[04/Dec/2018 14:22:23] "GET /admin/ HTTP/1.1" 200 3672
+[04/Dec/2018 14:22:23] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[04/Dec/2018 14:22:23] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[04/Dec/2018 14:22:23] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[04/Dec/2018 14:22:23] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[04/Dec/2018 14:22:55] "GET /admin/ HTTP/1.1" 200 3672
+[04/Dec/2018 14:22:55] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Dec/2018 14:22:55] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[04/Dec/2018 14:22:55] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Dec/2018 14:22:55] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Dec/2018 14:22:55] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Dec/2018 14:24:05] "GET /admin/gebcalculator/post/add/ HTTP/1.1" 200 7371
+[04/Dec/2018 14:24:05] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[04/Dec/2018 14:24:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[04/Dec/2018 14:24:05] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[04/Dec/2018 14:24:05] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[04/Dec/2018 14:24:05] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[04/Dec/2018 14:24:05] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[04/Dec/2018 14:24:05] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[04/Dec/2018 14:24:05] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[04/Dec/2018 14:24:05] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[04/Dec/2018 14:24:05] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[04/Dec/2018 14:24:05] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20283
+[04/Dec/2018 14:24:05] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[04/Dec/2018 14:24:05] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[04/Dec/2018 14:24:05] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[04/Dec/2018 14:24:05] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[04/Dec/2018 14:24:05] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[04/Dec/2018 14:24:05] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[04/Dec/2018 14:24:24] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+[04/Dec/2018 14:24:31] "POST /admin/gebcalculator/post/add/ HTTP/1.1" 302 0
+[04/Dec/2018 14:24:31] "GET /admin/gebcalculator/post/ HTTP/1.1" 200 4695
+[04/Dec/2018 14:24:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[04/Dec/2018 14:24:31] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[04/Dec/2018 14:24:31] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[04/Dec/2018 14:24:31] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[04/Dec/2018 14:24:38] "GET /admin/gebcalculator/ HTTP/1.1" 200 2489
+
+(myvenv) C:\Users\jj26280\djangoenvs>
